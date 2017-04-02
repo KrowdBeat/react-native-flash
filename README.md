@@ -5,6 +5,12 @@ Simple API to turn on and off flash in react native (anroid only)
 [![npm version](https://img.shields.io/npm/v/react-native-flash.svg?style=flat-square)](https://www.npmjs.com/package/react-native-flash)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-flash.svg?style=flat-square)](https://www.npmjs.com/package/react-native-flash)
 
+This Code Is No Longer Being Maintained.
+
+It works (at least for the react-native version it was built for) and as that it will be left here. 
+
+If anyone wants to maintain the code, I will gladly transfer ownership.
+
 ## Installation
 `npm install react-native-flash`
 
