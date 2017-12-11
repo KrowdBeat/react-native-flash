@@ -1,24 +1,25 @@
 {
   "name": "react-native-flash",
-  "version": "0.1.1",
-  "description": "React Native module to turn flash on and off (android only for now)",
+  "version": "0.2.1",
+  "description": "React Native module to turn flash on and off",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LCD344/react-native-flash.git"
+    "url": "git+https://github.com/KrowdBeat/react-native-flash.git"
   },
   "keywords": [
     "React-Native",
+    "iOS",
     "Flash",
     "Android"
   ],
   "author": "Nur Bar <lcd344@yahoo.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LCD344/react-native-flash/issues"
+    "url": "https://github.com/KrowdBeat/react-native-flash/issues"
   },
-  "homepage": "https://github.com/LCD344/react-native-flash#readme"
+  "homepage": "https://github.com/KrowdBeat/react-native-flash#readme"
 }
