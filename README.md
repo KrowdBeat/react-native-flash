@@ -1,15 +1,15 @@
 
-# react-native-flash (android-only)
+# react-native-flash
 
-Simple API to turn on and off flash in react native (anroid only)
+Simple API to turn on and off flash in react native
 
 [![npm version](https://img.shields.io/npm/v/react-native-flash.svg?style=flat-square)](https://www.npmjs.com/package/react-native-flash)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-flash.svg?style=flat-square)](https://www.npmjs.com/package/react-native-flash)
 
-It works (at least for the react-native version it was built for) and as that it will be left here. 
-
 ## Installation
-`npm install react-native-flash`
+
+	npm install react-native-flash
+	react-native link react-native-flash
 
 ## Android Installation
 In your `AndroidManifest.xml`
@@ -71,7 +71,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 ```
 
-## Android Usage
+## Usage
 
 In your `index.android.js`:
 ```javascript
@@ -96,5 +96,4 @@ import RNFlash from 'react-native-flash';
 ```
 
 ## TODO
- * [ ] IOS Support - I do not currently own a mac - so anyone who could offer help on this is welcome.
  * [ ] Any Suggestions?
