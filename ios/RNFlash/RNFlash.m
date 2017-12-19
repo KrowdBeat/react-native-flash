@@ -34,7 +34,6 @@ RCT_EXPORT_METHOD(turnOffFlash)
 {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch] && [device hasFlash]){
-        NSLog(@"Set flash light off");
         [device lockForConfiguration:nil];
         [device setTorchMode:AVCaptureTorchModeOff];
         [device unlockForConfiguration];
@@ -57,7 +56,6 @@ RCT_EXPORT_METHOD(turnOffFlash)
 - (void)doFakeFlashWithLevel:(float)level
 {
     float acceptedLevel = (level < AVCaptureMaxAvailableTorchLevel ? level : AVCaptureMaxAvailableTorchLevel);
-    NSLog(@"---> Set flash light on with level: %f", acceptedLevel);
 }
 
 @end
