@@ -10,16 +10,6 @@ Simple API to turn on and off flash in react native
     npm install react-native-flash
     react-native link react-native-flash
 
-## Android Installation
-
-In your `AndroidManifest.xml`
-
-```xml
-.....
-    <uses-permission android:name="android.permission.CAMERA" />a
-    <uses-permission android:name="android.hardware.camera" />
-```
-
 ## Usage
 
 In your `index.android.js`:
