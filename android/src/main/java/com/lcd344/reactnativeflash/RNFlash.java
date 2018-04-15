@@ -30,7 +30,6 @@ public class RNFlash extends ReactContextBaseJavaModule {
 	public RNFlash(ReactApplicationContext reactContext) {
 		super(reactContext);
 		mReactContext = reactContext;
-		mCamera = getCamera();
 	}
 
 
@@ -44,45 +43,44 @@ public class RNFlash extends ReactContextBaseJavaModule {
 
 		if (mCamera == null) {
 			try {
-				camera = Camera.open();
-				return camera;
+				mCamera = Camera.open();
 			} catch (RuntimeException e) {
 				Log.e("Camera Error. Failed to Open. Error: ", e.getMessage());
 			}
 		}
 
-		return null;
+		return mCamera;
 	}
 
 	@ReactMethod
 	public void turnOnFlash() {
-
+    Camera camera = getCamera();
 		Parameters params;
 
-		if (mCamera == null || !mReactContext.getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
+		if (camera == null || !mReactContext.getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
 			return;
 		}
 
-		params = mCamera.getParameters();
+		params = camera.getParameters();
 		params.setFlashMode(Parameters.FLASH_MODE_TORCH);
-		mCamera.setParameters(params);
-		mCamera.startPreview();
+		camera.setParameters(params);
+		camera.startPreview();
 	}
 
 
 	@ReactMethod
 	public void turnOffFlash() {
-
+    Camera camera = getCamera();
 		Parameters params;
 
-		if (mCamera == null || !mReactContext.getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
+		if (camera == null || !mReactContext.getApplicationContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)) {
 			return;
 		}
 
-		params = mCamera.getParameters();
+		params = camera.getParameters();
 		params.setFlashMode(Parameters.FLASH_MODE_OFF);
-		mCamera.setParameters(params);
-		mCamera.stopPreview();
+		camera.setParameters(params);
+		camera.stopPreview();
 	}
 
 	@ReactMethod
